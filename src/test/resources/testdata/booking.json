@@ -1,0 +1,112 @@
+[
+  {
+    "firstname": "John",
+    "lastname": "Doe",
+    "totalprice": 150,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2024-01-01",
+      "checkout": "2024-01-05"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  {
+    "firstname": "Jane",
+    "lastname": "Smith",
+    "totalprice": 200,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2024-02-10",
+      "checkout": "2024-02-15"
+    },
+    "additionalneeds": "Lunch"
+  },
+  {
+    "firstname": "Robert",
+    "lastname": "Johnson",
+    "totalprice": 300,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2024-03-15",
+      "checkout": "2024-03-20"
+    },
+    "additionalneeds": "Airport Transfer"
+  },
+  {
+    "firstname": "Maria",
+    "lastname": "Garcia",
+    "totalprice": 175,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2024-04-01",
+      "checkout": "2024-04-03"
+    },
+    "additionalneeds": "Extra Bed"
+  },
+  {
+    "firstname": "William",
+    "lastname": "Brown",
+    "totalprice": 450,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2024-05-20",
+      "checkout": "2024-05-25"
+    },
+    "additionalneeds": "Dinner"
+  },
+  {
+    "firstname": "Emma",
+    "lastname": "Wilson",
+    "totalprice": 280,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2024-06-15",
+      "checkout": "2024-06-18"
+    },
+    "additionalneeds": "Late Checkout"
+  },
+  {
+    "firstname": "Michael",
+    "lastname": "Taylor",
+    "totalprice": 320,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2024-07-01",
+      "checkout": "2024-07-05"
+    },
+    "additionalneeds": "Room Service"
+  },
+  {
+    "firstname": "Sophie",
+    "lastname": "Anderson",
+    "totalprice": 190,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2024-08-10",
+      "checkout": "2024-08-12"
+    },
+    "additionalneeds": "Early Check-in"
+  },
+  {
+    "firstname": "David",
+    "lastname": "Martinez",
+    "totalprice": 275,
+    "depositpaid": false,
+    "bookingdates": {
+      "checkin": "2024-09-05",
+      "checkout": "2024-09-10"
+    },
+    "additionalneeds": "Spa Access"
+  },
+  {
+    "firstname": "Lisa",
+    "lastname": "Thomas",
+    "totalprice": 225,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2024-10-15",
+      "checkout": "2024-10-18"
+    },
+    "additionalneeds": "City Tour"
+  }
+]

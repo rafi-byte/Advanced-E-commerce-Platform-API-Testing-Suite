@@ -15,8 +15,10 @@ public class RequestBuilder {
         return RestAssured.given()
                 .baseUri(APIConfig.getBaseUrl())
                 .contentType(ContentType.JSON)
+                .header("Accept", "application/json")  // Add this line
                 .accept(ContentType.JSON);
     }
+
 
     public static RequestSpecification createAuthenticatedRequest(String token) {
         logger.info("Creating authenticated request specification");
@@ -37,4 +39,6 @@ public class RequestBuilder {
                 .jsonPath()
                 .getString("token");
     }
+
+
 }

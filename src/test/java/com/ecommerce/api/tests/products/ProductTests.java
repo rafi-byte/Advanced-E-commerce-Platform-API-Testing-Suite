@@ -7,6 +7,7 @@ import io.restassured.response.Response;
 import org.testng.annotations.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
 public class ProductTests extends TestBase {
     private static final Logger logger = LoggerFactory.getLogger(ProductTests.class);
@@ -27,19 +28,54 @@ public class ProductTests extends TestBase {
                 + "}";
 
         Response response = RequestBuilder.createBasicRequest()
+                .header("Content-Type", "application/json")
+                .header("Accept", "application/json")
                 .body(requestBody)
                 .post("/booking");
 
         ResponseValidator.validateStatusCode(response, 200);
-        ResponseValidator.validateJsonFieldExists(response, "bookingid");
+        Assert.assertNotNull(response.jsonPath().getInt("bookingid"), "Booking ID should not be null");
     }
 
     @Test
     public void testDeleteBooking() {
         logger.info("Testing delete booking");
-        Response response = RequestBuilder.createAuthenticatedRequest(authToken)
-                .delete("/booking/1");
+        // First create a booking
+        String bookingBody = "{"
+                + "\"firstname\": \"John\","
+                + "\"lastname\": \"Doe\","
+                + "\"totalprice\": 111,"
+                + "\"depositpaid\": true,"
+                + "\"bookingdates\": {"
+                + "    \"checkin\": \"2024-01-01\","
+                + "    \"checkout\": \"2024-01-02\""
+                + "},"
+                + "\"additionalneeds\": \"Breakfast\""
+                + "}";
 
-        ResponseValidator.validateStatusCode(response, 201);
+        Response createResponse = RequestBuilder.createBasicRequest()
+                .header("Content-Type", "application/json")
+                .header("Accept", "application/json")
+                .body(bookingBody)
+                .post("/booking");
+
+        ResponseValidator.validateStatusCode(createResponse, 200);
+
+        // Add error handling for booking ID extraction
+        try {
+            int bookingId = createResponse.jsonPath().getInt("bookingid");
+            logger.info("Created booking with ID: " + bookingId);
+
+            Response deleteResponse = RequestBuilder.createBasicRequest()
+                    .header("Cookie", "token=" + authToken)
+                    .header("Content-Type", "application/json")
+                    .header("Accept", "application/json")
+                    .delete("/booking/" + bookingId);
+
+            ResponseValidator.validateStatusCode(deleteResponse, 201);
+        } catch (Exception e) {
+            logger.error("Failed to extract booking ID from response: " + createResponse.asString());
+            Assert.fail("Failed to create booking for delete test: " + e.getMessage());
+        }
     }
 }

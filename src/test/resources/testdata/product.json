@@ -1,0 +1,82 @@
+[
+  {
+    "id": 101,
+    "name": "Laptop Pro X",
+    "description": "High-performance laptop with 16GB RAM",
+    "price": 1299.99,
+    "stock": 50,
+    "available": true
+  },
+  {
+    "id": 102,
+    "name": "Smartphone Ultra",
+    "description": "Latest smartphone with 5G capability",
+    "price": 899.99,
+    "stock": 100,
+    "available": true
+  },
+  {
+    "id": 103,
+    "name": "Wireless Headphones",
+    "description": "Noise-cancelling bluetooth headphones",
+    "price": 199.99,
+    "stock": 75,
+    "available": true
+  },
+  {
+    "id": 104,
+    "name": "Smart Watch",
+    "description": "Fitness tracking smartwatch",
+    "price": 299.99,
+    "stock": 60,
+    "available": true
+  },
+  {
+    "id": 105,
+    "name": "Tablet Pro",
+    "description": "10-inch tablet with stylus support",
+    "price": 499.99,
+    "stock": 40,
+    "available": true
+  },
+  {
+    "id": 106,
+    "name": "Gaming Console",
+    "description": "Next-gen gaming console",
+    "price": 499.99,
+    "stock": 30,
+    "available": true
+  },
+  {
+    "id": 107,
+    "name": "Wireless Speaker",
+    "description": "Portable bluetooth speaker",
+    "price": 79.99,
+    "stock": 90,
+    "available": true
+  },
+  {
+    "id": 108,
+    "name": "4K Monitor",
+    "description": "27-inch 4K gaming monitor",
+    "price": 399.99,
+    "stock": 25,
+    "available": true
+  },
+  {
+    "id": 109,
+    "name": "Wireless Mouse",
+    "description": "Ergonomic wireless mouse",
+    "price": 49.99,
+    "stock": 120,
+    "available": true
+  },
+  {
+    "id": 110,
+    "name": "Mechanical Keyboard",
+    "description": "RGB mechanical gaming keyboard",
+    "price": 129.99,
+    "stock": 45,
+    "available": true
+  }
+]
